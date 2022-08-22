@@ -1,0 +1,36 @@
+.header {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8rem 6.4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    font-size: 3.2rem;
+  }
+  &__nav > ul {
+    display: flex;
+    gap: 4rem;
+    & > li {
+      text-transform: capitalize;
+      font-family: $secondary-fonts;
+      font-weight: 400;
+      font-size: $normal-font-size;
+      cursor: pointer;
+    }
+  }
+  .profile {
+    font-size: 1.7rem;
+    font-family: $secondary-fonts;
+    font-weight: 400;
+    &__icon {
+      font-size: 1.7rem;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}

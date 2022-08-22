@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../fonts/Gilroy-Medium.woff2") format("woff2"), url("../../fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../../fonts/Gilroy-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../fonts/Gilroy-Bold.woff2") format("woff2"), url("../../fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../fonts/Gilroy-Regular.woff2") format("woff2"), url("../../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
@@ -18,18 +46,107 @@ img {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Chronicle Display", sans-serif;
   line-height: 1;
-  color: #333333;
+  color: white;
+}
+
+.header {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8rem 6.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.header__logo {
+  font-size: 3.2rem;
+}
+.header__nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+}
+.header__nav > ul > li {
+  text-transform: capitalize;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+}
+.header .profile {
+  font-size: 1.7rem;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+.header .profile__icon {
+  font-size: 1.7rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.hero {
+  padding: 8rem 6.4rem;
+  color: white;
+  position: relative;
+  z-index: 0;
+  background-image: url(../../images/HG.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  isolation: isolate;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0b1d26 108.93%);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.hero .heading {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%);
+  z-index: 2;
+}
+.hero .heading__subtitle {
+  color: #fbd784;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+.hero .heading__title {
+  font-size: 88px;
+  line-height: 100px;
+  font-weight: 375;
+}
+.hero .heading__guide {
+  font-family: "Gilroy", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  font-weight: 400;
 }
 
 .wrapper {
-  max-width: 1920px;
+  max-width: 100%;
   margin: 0 auto;
-}
-
-.container {
-  max-width: 1230px;
-  margin: 0 auto;
-  padding: 0 15px;
+  position: relative;
 }
