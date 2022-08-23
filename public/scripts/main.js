@@ -1,0 +1,1 @@
+const heading=document.getElementById("hero__heading"),hero=document.getElementById("hero");hero.addEventListener("scroll",()=>{console.log("scroll");var e=window.pageYOffset||hero.scrollTop;console.log("scrollTop",e),console.log("heading",heading),heading.style.top=40+.05*e+"%"});

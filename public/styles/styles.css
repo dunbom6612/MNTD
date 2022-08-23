@@ -96,8 +96,17 @@ body {
 }
 
 .hero {
-  padding: 8rem 6.4rem;
   color: white;
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.hero__bg {
+  padding: 8rem 6.4rem;
+  width: 100%;
+  height: 100%;
   position: relative;
   z-index: 0;
   background-image: url(../../images/HG.svg);
@@ -106,9 +115,8 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
-  isolation: isolate;
 }
-.hero::before {
+.hero__bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -118,12 +126,44 @@ body {
   width: 100%;
   height: 100%;
 }
+.hero__mountain {
+  position: absolute;
+  top: 50rem;
+  width: 100%;
+  height: 144.22rem;
+  background-image: url(../../images/MG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+.hero__foreground {
+  position: absolute;
+  top: 90rem;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../images/VG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+.hero__foreground::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url(../../images/BG_Content.svg);
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+}
 .hero .heading {
   position: absolute;
   left: 50%;
   top: 40%;
   -webkit-transform: translate(-50%, -40%);
   transform: translate(-50%, -40%);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   z-index: 2;
 }
 .hero .heading__subtitle {
